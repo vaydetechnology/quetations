@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Wonder Tots Connect — Official Quotation</title>
+
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-55"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =========================
+         RESET
+      ========================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --c1: #2edfff;
+        --c2: #818cf8;
+        --c3: #8b5cf6;
+
+        --grad: linear-gradient(135deg, #2edfff, #818cf8, #8b5cf6);
+
+        --bg: #cdd1e8;
+
+        --white: #ffffff;
+
+        --surface: #f8f9fd;
+
+        --border: #e3e7f1;
+
+        --ink: #111827;
+        --ink2: #374151;
+        --ink3: #6b7280;
+        --ink4: #9ca3af;
+
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      }
+
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        background: var(--bg);
+
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+
+        padding: 40px 18px;
+
+        color: var(--ink);
+
+        -webkit-font-smoothing: antialiased;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* =========================
+         PAGE
+      ========================= */
+
+      .page {
+        width: 860px;
+        max-width: 860px;
+
+        margin: auto;
+
+        background: white;
+
+        border-radius: 12px;
+
+        overflow: hidden;
+
+        box-shadow: var(--shadow);
+      }
+
+      /* TOPBAR */
+
+      .topbar {
+        height: 6px;
+        background: var(--grad);
+      }
+
+      /* =========================
+         HEADER
+      ========================= */
+
+      .header {
+        display: flex;
+        align-items: stretch;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .header-left {
+        width: 50%;
+
+        padding: 42px;
+
+        border-right: 1px solid var(--border);
+      }
+
+      .company-logo {
+        width: 220px;
+
+        height: auto;
+
+        object-fit: contain;
+
+        display: block;
+
+        margin-bottom: 18px;
+      }
+
+      .tagline {
+        color: var(--ink3);
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        font-weight: 700;
+      }
+
+      .contact {
+        margin-top: 26px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .contact div {
+        font-size: 13px;
+
+        color: var(--ink3);
+
+        font-weight: 700;
+      }
+
+      /* RIGHT */
+
+      .header-right {
+        width: 50%;
+
+        padding: 42px;
+
+        background: var(--surface);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .doc-type {
+        font-size: 11px;
+
+        font-weight: 900;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+
+        background: var(--grad);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        background-clip: text;
+      }
+
+      .quote-title {
+        margin-top: 10px;
+
+        font-size: 52px;
+
+        font-weight: 900;
+
+        letter-spacing: -3px;
+      }
+
+      .meta {
+        margin-top: 30px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .meta-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .meta-label {
+        color: var(--ink4);
+
+        font-size: 13px;
+
+        font-weight: 700;
+      }
+
+      .meta-value {
+        background: white;
+
+        padding: 6px 14px;
+
+        border-radius: 999px;
+
+        border: 1px solid var(--border);
+
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      /* =========================
+         BODY
+      ========================= */
+
+      .body {
+        padding: 42px;
+      }
+
+      .section {
+        margin-top: 38px;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        margin-bottom: 18px;
+      }
+
+      .section-title {
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .section-rule {
+        flex: 1;
+        height: 1px;
+
+        background: linear-gradient(90deg, var(--border), transparent);
+      }
+
+      /* CLIENT GRID */
+
+      .grid {
+        display: flex;
+        gap: 16px;
+      }
+
+      .card {
+        width: 50%;
+
+        background: var(--surface);
+
+        border: 1px solid var(--border);
+
+        border-radius: 12px;
+
+        padding: 24px;
+      }
+
+      .card-label {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        font-weight: 900;
+
+        text-transform: uppercase;
+
+        background: var(--grad);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        background-clip: text;
+      }
+
+      .card-title {
+        margin-top: 14px;
+
+        font-size: 24px;
+
+        font-weight: 900;
+      }
+
+      .card-sub {
+        margin-top: 4px;
+
+        color: var(--ink2);
+
+        font-size: 14px;
+
+        font-weight: 800;
+      }
+
+      .card-text {
+        margin-top: 16px;
+
+        line-height: 1.8;
+
+        color: var(--ink3);
+
+        font-size: 14px;
+
+        font-weight: 700;
+      }
+
+      /* PROJECT */
+
+      .project {
+        background: linear-gradient(
+          135deg,
+          rgba(46, 223, 255, 0.08),
+          rgba(139, 92, 246, 0.08)
+        );
+
+        border: 1px solid rgba(129, 140, 248, 0.2);
+
+        border-radius: 12px;
+
+        padding: 30px;
+      }
+
+      .project-title {
+        font-size: 30px;
+
+        font-weight: 900;
+
+        letter-spacing: -1px;
+      }
+
+      .project-desc {
+        margin-top: 12px;
+
+        color: var(--ink2);
+
+        line-height: 1.8;
+
+        font-size: 15px;
+
+        font-weight: 700;
+      }
+
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        margin-top: 24px;
+      }
+
+      .pill {
+        background: white;
+
+        border: 1px solid rgba(129, 140, 248, 0.2);
+
+        padding: 10px 16px;
+
+        border-radius: 999px;
+
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      /* PHASE */
+
+      .phase {
+        border: 1px solid var(--border);
+
+        border-radius: 12px;
+
+        overflow: hidden;
+      }
+
+      .phase-top {
+        display: flex;
+      }
+
+      .phase-stripe {
+        width: 6px;
+
+        background: var(--grad);
+      }
+
+      .phase-header {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        padding: 20px 24px;
+
+        background: white;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .phase-badge {
+        background: #eef2ff;
+
+        color: #4f46e5;
+
+        padding: 7px 14px;
+
+        border-radius: 999px;
+
+        font-size: 10px;
+        font-weight: 900;
+
+        letter-spacing: 1px;
+      }
+
+      .phase-name {
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      .phase-time {
+        margin-left: auto;
+
+        color: var(--ink4);
+
+        font-size: 13px;
+
+        font-weight: 700;
+      }
+
+      .phase-content {
+        background: var(--surface);
+
+        padding: 26px;
+      }
+
+      .phase-desc {
+        color: var(--ink2);
+
+        line-height: 1.8;
+
+        font-size: 14px;
+
+        font-weight: 700;
+      }
+
+      /* FEATURES */
+
+      .features {
+        margin-top: 24px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .feature {
+        width: calc(50% - 6px);
+
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 10px;
+
+        padding: 12px 14px;
+
+        font-size: 13px;
+        line-height: 1.6;
+
+        font-weight: 800;
+      }
+
+      .check {
+        width: 18px;
+        height: 18px;
+
+        border-radius: 50%;
+
+        background: var(--grad);
+
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 11px;
+        font-weight: 900;
+
+        flex-shrink: 0;
+      }
+
+      /* NOTES */
+
+      .notes {
+        display: flex;
+
+        gap: 16px;
+      }
+
+      .note {
+        width: 33.333%;
+
+        background: var(--surface);
+
+        border: 1px solid var(--border);
+
+        border-radius: 12px;
+
+        padding: 22px;
+      }
+
+      .note-title {
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .note-text {
+        margin-top: 12px;
+
+        color: var(--ink3);
+
+        line-height: 1.8;
+
+        font-size: 14px;
+
+        font-weight: 700;
+      }
+
+      /* FOOTER */
+
+      .footer {
+        background: var(--surface);
+
+        border-top: 1px solid var(--border);
+
+        padding: 36px 42px;
+      }
+
+      .footer-title {
+        font-size: 28px;
+        font-weight: 900;
+      }
+
+      .footer-sub {
+        margin-top: 12px;
+
+        max-width: 620px;
+
+        color: var(--ink3);
+
+        line-height: 1.8;
+
+        font-size: 14px;
+
+        font-weight: 700;
+      }
+
+      /* =========================
+         CLEAN A4 PRINT FIX
+      ========================= */
+
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+
+      @media print {
+        html,
+        body {
+          width: 100%;
+          height: auto;
+
+          margin: 0 !important;
+          padding: 0 !important;
+
+          background: white !important;
+
+          overflow: visible !important;
+
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        body {
+          display: block;
+        }
+
+        .page {
+          width: 190mm !important;
+
+          max-width: 190mm !important;
+
+          height: auto !important;
+
+          min-height: auto !important;
+
+          margin: 0 auto !important;
+
+          overflow: visible !important;
+
+          border-radius: 0 !important;
+
+          box-shadow: none !important;
+
+          transform: none !important;
+        }
+
+        .header-left,
+        .header-right {
+          padding: 20px !important;
+        }
+
+        .body {
+          padding: 20px !important;
+        }
+
+        .footer {
+          padding: 18px 20px !important;
+        }
+
+        .section {
+          margin-top: 18px !important;
+        }
+
+        .section-head {
+          margin-bottom: 10px !important;
+        }
+
+        .project,
+        .phase-content {
+          padding: 16px !important;
+        }
+
+        .note {
+          padding: 14px !important;
+        }
+
+        .quote-title {
+          font-size: 36px !important;
+        }
+
+        .project-title {
+          font-size: 24px !important;
+        }
+
+        .phase-name {
+          font-size: 16px !important;
+        }
+
+        .card-title {
+          font-size: 18px !important;
+        }
+
+        .project-desc,
+        .phase-desc,
+        .card-text,
+        .note-text {
+          font-size: 11px !important;
+          line-height: 1.5 !important;
+        }
+
+        .feature {
+          font-size: 10px !important;
+
+          padding: 8px 10px !important;
+
+          line-height: 1.4 !important;
+        }
+
+        .footer-title {
+          font-size: 20px !important;
+        }
+
+        .footer-sub {
+          font-size: 11px !important;
+        }
+
+        .company-logo {
+          width: 160px !important;
+        }
+
+        .card,
+        .project,
+        .phase,
+        .note {
+          page-break-inside: avoid !important;
+          break-inside: avoid !important;
+        }
+
+        .body,
+        .section,
+        .features {
+          overflow: visible !important;
+        }
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 860px) {
+        .header,
+        .grid,
+        .notes {
+          flex-direction: column;
+        }
+
+        .header-left,
+        .header-right,
+        .card,
+        .note {
+          width: 100%;
+        }
+
+        .header-left {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .body,
+        .footer,
+        .header-left,
+        .header-right {
+          padding: 24px;
+        }
+
+        .features {
+          flex-direction: column;
+        }
+
+        .feature {
+          width: 100%;
+        }
+
+        .quote-title {
+          font-size: 42px;
+        }
+
+        .company-logo {
+          width: 180px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="topbar"></div>
+
+      <div class="header">
+        <div class="header-left">
+          <img
+            src="transparent_colorfull_text.png"
+            alt="Vayde Logo"
+            class="company-logo"
+          />
+
+          <div class="tagline">Engineering Tomorrow’s Digital Experiences</div>
+
+          <div class="contact">
+            <div>vaydetechnologys@gmail.com</div>
+            <div>+91 8547266801</div>
+            <div>www.vayde.in</div>
+            <div>Wayanad, Kerala — 673592, India</div>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div>
+            <div class="doc-type">OFFICIAL QUOTATION</div>
+
+            <div class="quote-title">Quotation</div>
+          </div>
+
+          <div class="meta">
+            <div class="meta-row">
+              <div class="meta-label">Reference No.</div>
+              <div class="meta-value">VYD-2025-0087</div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">Issue Date</div>
+              <div class="meta-value">09 May 2026</div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">Valid Until</div>
+              <div class="meta-value">09 June 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="section">
+          <div class="section-head">
+            <div class="section-title">Client Information</div>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="card-label">BILL TO</div>
+
+              <div class="card-title">Mr. Shameim</div>
+
+              <div class="card-sub">Wonder Tots International</div>
+
+              <div class="card-text">
+                Thuvvur Road, Mampuzha,<br />
+                Karuvarakundu,<br />
+                Kerala 676523
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">PREPARED BY</div>
+
+              <div class="card-title">Vayde Technologies</div>
+
+              <div class="card-sub">Lead Solutions Team</div>
+
+              <div class="card-text">
+                Wayanad, Kerala — 673592<br />
+                vaydetechnologys@gmail.com
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <div class="section-title">Project Overview</div>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="project">
+            <div class="project-title">Wonder Tots Connect</div>
+
+            <div class="project-desc">
+              An all-in-one AI-powered kindergarten management platform designed
+              for parents, teachers, and administrators to streamline
+              communication, attendance, academics, fee management, and student
+              progress tracking.
+            </div>
+
+            <div class="pills">
+              <div class="pill">WebApp + Android</div>
+              <div class="pill">Cloud Hosted</div>
+              <div class="pill">AI Powered</div>
+              <div class="pill">Real-Time Sync</div>
+              <div class="pill">Dedicated PM</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <div class="section-title">Scope of Work — Phase 01</div>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="phase">
+            <div class="phase-top">
+              <div class="phase-stripe"></div>
+
+              <div class="phase-header">
+                <div class="phase-badge">PHASE 01</div>
+
+                <div class="phase-name">
+                  Core Kindergarten Management System
+                </div>
+
+                <div class="phase-time">Weeks 1 – 3</div>
+              </div>
+            </div>
+
+            <div class="phase-content">
+              <div class="phase-desc">
+                Build a modern kindergarten ecosystem where parents stay
+                connected with their child’s daily learning journey, teachers
+                manage classrooms efficiently, and administrators oversee
+                operations seamlessly from one intelligent platform.
+              </div>
+
+              <div class="features">
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Parent App Dashboard
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Teacher Management System
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Admin Dashboard & Controls
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Student Profile Management
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Attendance Summary Tracking
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  AI Camera Auto Attendance
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Face Recognition Attendance
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Report Card Management
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Curricular Activity Uploads
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Homework & Announcements
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Digital Student ID Card
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Student Leave Request System
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Teacher Leave Request Approval
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Fee & Payment Management
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Pending Fee Tracking
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Online Payment Integration
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Automated Payment Reminders
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  AI Parent Chat Assistant
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Notifications & Circular System
+                </div>
+
+                <div class="feature">
+                  <div class="check">✓</div>
+                  Student Academic Tracking
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <div class="section-title">Terms & Notes</div>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="notes">
+            <div class="note">
+              <div class="note-title">Payment Terms</div>
+
+              <div class="note-text">
+                30% advance payment before starting<br />
+                Remaining payment after phase completion<br />
+                Bank transfer / UPI accepted
+              </div>
+            </div>
+
+            <div class="note">
+              <div class="note-title">Delivery Timeline</div>
+
+              <div class="note-text">2–3 Weeks</div>
+            </div>
+
+            <div class="note">
+              <div class="note-title">Validity & Warranty</div>
+
+              <div class="note-text">
+                Bug fixes & support provided after project completion<br />
+                Additional features or changes will require extra charges<br />
+                Quotation valid for 30 days
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-title">
+          Thank you for choosing Vayde Technologies ✦
+        </div>
+
+        <div class="footer-sub">
+          We are excited to build something extraordinary together. Please reach
+          out for any clarifications or custom requirements regarding the Wonder
+          Tots Connect platform.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
