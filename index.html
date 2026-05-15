@@ -717,48 +717,32 @@
       }
 
       /* =========================
-         MOBILE — scale only, keep layout identical
+         MOBILE — proportional scale, identical layout
       ========================= */
 
       @media (max-width: 860px) {
         body {
-          padding: 12px 8px;
+          padding: 0;
+          overflow-x: hidden;
+        }
+
+        .page-wrap {
+          width: 100vw;
+          overflow: hidden;
         }
 
         .page {
-          width: 100%;
-          max-width: 100%;
-          /* shrink the whole page using viewport-relative font scaling */
-          font-size: clamp(7px, 1.6vw, 14px);
+          width: 860px;
+          max-width: 860px;
+          transform-origin: top left;
+          /* scale applied by JS */
         }
-
-        /* Let every rem/em-based size scale with the root,
-           and override the few px-fixed sizes */
-
-        .quote-title      { font-size: clamp(22px, 5.5vw, 52px); }
-        .project-title    { font-size: clamp(16px, 4vw,  30px); }
-        .card-title       { font-size: clamp(13px, 3vw,  24px); }
-        .footer-title     { font-size: clamp(14px, 3.5vw,28px); }
-        .phase-name       { font-size: clamp(11px, 2.5vw,20px); }
-
-        /* tighten fixed paddings so content isn't cramped */
-        .header-left,
-        .header-right     { padding: clamp(14px, 3vw, 42px); }
-        .body             { padding: clamp(14px, 3vw, 42px); }
-        .footer           { padding: clamp(14px, 3vw, 36px) clamp(14px, 3vw, 42px); }
-        .card             { padding: clamp(12px, 2.5vw, 24px); }
-        .project          { padding: clamp(14px, 3vw, 30px); }
-        .phase-header     { padding: clamp(10px, 2vw, 20px) clamp(12px, 2.5vw, 24px); }
-        .phase-content    { padding: clamp(12px, 2.5vw, 26px); }
-        .note             { padding: clamp(12px, 2.5vw, 22px); }
-
-        /* company logo */
-        .company-logo     { width: clamp(100px, 22vw, 220px); }
       }
     </style>
   </head>
 
   <body>
+    <div class="page-wrap">
     <div class="page">
       <div class="topbar"></div>
 
@@ -1051,5 +1035,27 @@
         </div>
       </div>
     </div>
+    </div><!-- /.page-wrap -->
+
+    <script>
+      function scaleQuote() {
+        var wrap = document.querySelector('.page-wrap');
+        var page = document.querySelector('.page');
+        if (!wrap || !page) return;
+
+        var vw = window.innerWidth;
+        if (vw < 860) {
+          var scale = vw / 860;
+          page.style.transform = 'scale(' + scale + ')';
+          wrap.style.height = Math.round(page.scrollHeight * scale) + 'px';
+        } else {
+          page.style.transform = '';
+          wrap.style.height = '';
+        }
+      }
+
+      scaleQuote();
+      window.addEventListener('resize', scaleQuote);
+    </script>
   </body>
 </html>
