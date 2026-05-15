@@ -716,49 +716,44 @@
         }
       }
 
-      /* MOBILE */
+      /* =========================
+         MOBILE — scale only, keep layout identical
+      ========================= */
 
       @media (max-width: 860px) {
-        .header,
-        .grid,
-        .notes {
-          flex-direction: column;
+        body {
+          padding: 12px 8px;
         }
 
-        .header-left,
-        .header-right,
-        .card,
-        .note {
+        .page {
           width: 100%;
+          max-width: 100%;
+          /* shrink the whole page using viewport-relative font scaling */
+          font-size: clamp(7px, 1.6vw, 14px);
         }
 
-        .header-left {
-          border-right: none;
-          border-bottom: 1px solid var(--border);
-        }
+        /* Let every rem/em-based size scale with the root,
+           and override the few px-fixed sizes */
 
-        .body,
-        .footer,
+        .quote-title      { font-size: clamp(22px, 5.5vw, 52px); }
+        .project-title    { font-size: clamp(16px, 4vw,  30px); }
+        .card-title       { font-size: clamp(13px, 3vw,  24px); }
+        .footer-title     { font-size: clamp(14px, 3.5vw,28px); }
+        .phase-name       { font-size: clamp(11px, 2.5vw,20px); }
+
+        /* tighten fixed paddings so content isn't cramped */
         .header-left,
-        .header-right {
-          padding: 24px;
-        }
+        .header-right     { padding: clamp(14px, 3vw, 42px); }
+        .body             { padding: clamp(14px, 3vw, 42px); }
+        .footer           { padding: clamp(14px, 3vw, 36px) clamp(14px, 3vw, 42px); }
+        .card             { padding: clamp(12px, 2.5vw, 24px); }
+        .project          { padding: clamp(14px, 3vw, 30px); }
+        .phase-header     { padding: clamp(10px, 2vw, 20px) clamp(12px, 2.5vw, 24px); }
+        .phase-content    { padding: clamp(12px, 2.5vw, 26px); }
+        .note             { padding: clamp(12px, 2.5vw, 22px); }
 
-        .features {
-          flex-direction: column;
-        }
-
-        .feature {
-          width: 100%;
-        }
-
-        .quote-title {
-          font-size: 42px;
-        }
-
-        .company-logo {
-          width: 180px;
-        }
+        /* company logo */
+        .company-logo     { width: clamp(100px, 22vw, 220px); }
       }
     </style>
   </head>
@@ -775,7 +770,7 @@
             class="company-logo"
           />
 
-          <div class="tagline">Engineering Tomorrow’s Digital Experiences</div>
+          <div class="tagline">Engineering Tomorrow's Digital Experiences</div>
 
           <div class="contact">
             <div>vaydetechnologys@gmail.com</div>
@@ -898,7 +893,7 @@
             <div class="phase-content">
               <div class="phase-desc">
                 Build a modern kindergarten ecosystem where parents stay
-                connected with their child’s daily learning journey, teachers
+                connected with their child's daily learning journey, teachers
                 manage classrooms efficiently, and administrators oversee
                 operations seamlessly from one intelligent platform.
               </div>
